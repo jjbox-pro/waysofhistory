@@ -1,0 +1,32 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "waysofhistory.keystore",
+            "storePassword": "js9wo93ok",
+            "alias": "waysofhistory",
+            "password": "js9wo93ok",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "waysofhistory.keystore",
+            "storePassword": "js9wo93ok",
+            "alias": "waysofhistory",
+            "password": "js9wo93ok",
+            "keystoreType": ""
+        }
+    },
+	"ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "LWC2X53ZMU",
+            "packageType": "development",
+            "automaticProvisioning": true
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Developer",
+            "developmentTeam": "LWC2X53ZMU",
+            "packageType": "app-store",
+            "automaticProvisioning": true
+        }
+    }
+}

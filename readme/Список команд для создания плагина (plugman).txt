@@ -1,0 +1,13 @@
+﻿Создание плагина:
+
+1) npm i -g plugman (если не установлено)
+
+2) plugman create --name CordovaCustomPlugin --plugin_id cordova-plugin-name --plugin_version 1.0.0
+
+3) plugman platform add --platform_name android
+	
+4) plugman createpackagejson ./
+
+
+
+cordova plugin add plugins_src/cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.530673218839-iroukardu627knpn91f0qrmog3omc4jk --variable WEB_APPLICATION_CLIENT_ID=530673218839-9vr964emi57ra48q9soe2vei25o5bkg5.apps.googleusercontent.com

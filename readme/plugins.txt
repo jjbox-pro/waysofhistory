@@ -1,0 +1,11 @@
+cordova plugin add https://github.com/jjbox-pro/cordova-plugin-platform-accessor.git
+
+cordova plugin add cordova-plugin-googleplus --save --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.530673218839-iroukardu627knpn91f0qrmog3omc4jk --variable WEB_APPLICATION_CLIENT_ID=530673218839-9vr964emi57ra48q9soe2vei25o5bkg5.apps.googleusercontent.com
+
+cordova plugin add cordova-plugin-game-center
+
+cordova plugin add cordova-plugin-nativestorage
+
+cordova plugin add cordova-plugin-android-permissions
+
+

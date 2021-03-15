@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.waysofhistory" version="1.0.67" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ways of History</name>
+    <description>
+        π — Ways of History. Global strategic game.
+    </description>
+    <author email="support@waysofhistory.com" href="https://waysofhistory.com">
+        Glyph Worlds Team
+    </author>
+    <content src="launcher.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+	<allow-navigation href="https://*.waysofhistory.com/*" />
+	
+	
+	
+    <platform name="android">
+		<hook type="before_build" src="scripts/platforms/android/before_build.sh" />
+		
+        <allow-intent href="market:*" />
+		<icon src="res/icon/icon.png" />
+		<icon density="ldpi" src="res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+		<splash density="ldpi" src="res/icon/android/ldpi.png" />
+        <splash density="mdpi" src="res/icon/android/mdpi.png" />
+        <splash density="hdpi" src="res/icon/android/hdpi.png" />
+        <splash density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <splash density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+        <splash density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+    </platform>
+    <platform name="ios">
+		<hook type="before_build" src="scripts/platforms/ios/before_build.sh" />
+		
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+		<preference name="scheme" value="app" />
+		<preference name="hostname" value="localhost" />
+    </platform>
+</widget>

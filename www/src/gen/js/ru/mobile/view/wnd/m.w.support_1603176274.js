@@ -1,0 +1,1 @@
+utils.reExtend(wConsoleErrors, ConfirmWnd);
