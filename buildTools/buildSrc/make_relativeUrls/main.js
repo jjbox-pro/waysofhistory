@@ -35,6 +35,8 @@ const {utils} = require('utils');
 		};
 	})();
 	
+	utils.log('\n\n\n<------------ start make relative urls for: ' + platform.name + ' ------------>\n\n\n');
+	
 	const root = config.root + platform.name + '/';
 
 	const useWebPaths = true;
@@ -162,14 +164,26 @@ const {utils} = require('utils');
 		{dir: 'ggen/'},
 		{dir: 'gen/'}
 	]
-
+	
+	for(var srcDir in srcDirs){
+		srcDir = srcDirs[srcDir];
+		
+		if( !utils.isDirExist(root + srcDir.dir) ){
+			utils.logWarn('No sources folders for processing');
+			
+			return;
+		}
+	}
+	
 	for(var srcDir in srcDirs){
 		srcDir = srcDirs[srcDir];
 		
 		try{
 			srcDir.files = utils.getFiles(root + srcDir.dir);
 		}
-		catch(e){}
+		catch(e){
+			utils.logError(e);
+		}
 		
 		filesWithReplaces = {};
 		filesWithImgReplaces = {};
@@ -221,7 +235,7 @@ const {utils} = require('utils');
 		}
 	}
 	
-	utils.log('<------------ end ------------>');
+	utils.log('\n\n\n<------------ end make relative urls for: ' + platform.name + ' ------------>\n\n\n');
 	
 	//utils.terminateProcessAfterPress();
 })();

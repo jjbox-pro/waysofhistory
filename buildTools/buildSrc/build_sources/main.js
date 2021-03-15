@@ -35,8 +35,16 @@ const {utils} = require('utils');
 		};
 	})();
 	
+	utils.log('\n\n\n<------------ start build sources for: ' + platform.name + ' ------------>\n\n\n');
+	
 	const 	pathSrc = config.pathSrc + config.folderSrc.replace('<platformCode>', platform.code) + '/',
 			pathOutput = config.pathOutput + platform.name + '/';
+	
+	if( !utils.isDirExist(pathSrc) ){
+		utils.logWarn('No sources folder ' + '"' + pathSrc + '"' + ' for platform: ' + platform.name);
+		
+		return;
+	}
 	
 	var srcDirs = [
 		{dir: 'ggen/', lang: '(' + config.lang + ')', included: '(html)'},
@@ -199,7 +207,7 @@ const {utils} = require('utils');
 	}());
 	
 	
-	utils.log('<------------ end ------------>');
+	utils.log('\n\n\n<------------ end build sources for: ' + platform.name + ' ------------>\n\n\n');
 	
 	
 	//utils.terminateProcessAfterPress();

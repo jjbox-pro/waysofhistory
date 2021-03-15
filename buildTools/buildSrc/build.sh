@@ -4,7 +4,7 @@ cd -- "$(dirname "$BASH_SOURCE")"
 
 platforms=()
 platforms[0]="android|an|8"
-#platforms[1]="ios|io|9"
+platforms[1]="ios|io|9"
 
 noImages=$1
 
@@ -15,7 +15,7 @@ do
 	bash run.sh "platform=${platform}" $noImages
 	cd ..
 	cd make_relativeUrls
-	bash run.sh $platform
+	bash run.sh "platform=${platform}"
 	cd ..
 done
 
