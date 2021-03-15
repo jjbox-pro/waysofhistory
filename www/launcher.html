@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="background: black;">
+    <head>
+		<meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+		
+		<link rel="stylesheet" type="text/css" href="launcher.css">
+		<link rel="stylesheet" type="text/css" href="src/launcher.css">
+        
+		<title>Launcher</title>
+		
+		<script type="text/javascript">
+			window.onerror = function(msg, url, lineNo, columnNo, systemError){
+				var error = {
+					msg: msg,
+					url: url,
+					lineNo: lineNo,
+					columnNo: columnNo,
+					stack: systemError ? systemError.stack : ''
+				};
+				
+				alert('Error: ' + JSON.stringify(error, undefined, 2));
+				
+				window.onerror = null;
+			};
+		</script>
+		
+		<script type="text/javascript" src="cordova.js"></script>
+		
+		<script type="text/javascript" src="launcher.js"></script>
+		<script type="text/javascript" src="src/launcher.js"></script>
+    </head>
+    <body class="-invis">
+		<div>Ways of History</div>
+		
+		<span>build version: 1.0.69</span>
+	</body>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+</html>
