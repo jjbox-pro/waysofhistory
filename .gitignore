@@ -21,6 +21,7 @@
 /src/**/ggen/
 
 /srcRaw/*
+!/srcRaw/README.md
 
 /www/src/
 
