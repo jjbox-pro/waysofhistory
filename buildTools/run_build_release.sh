@@ -2,8 +2,15 @@
 
 cd -- "$(dirname "$BASH_SOURCE")"
 
-cd ..
+platforms=()
+platforms[0]="android"
+platforms[1]="ios"
 
-cordova build android -release
+for platform in ${platforms[@]}
+do
+	cd platforms/${platform}
+	bash run_build_release.sh
+	cd ../../
+done
 
 #read -p "Press enter to continue..."

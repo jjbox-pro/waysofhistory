@@ -9,10 +9,10 @@ app.googleAccountErrors = {
 app.googleAccountWebClientId = '530673218839-9vr964emi57ra48q9soe2vei25o5bkg5.apps.googleusercontent.com';
 	
 app.getPlatformAccountInfo = function(platformData, callback){
-	app.getGoogleAccountInfo(callback);
+	app.getGoogleAccountInfo(platformData, callback);
 };
 	
-	app.getGoogleAccountInfo = function(callback) {
+	app.getGoogleAccountInfo = function(platformData, callback) {
 		window.plugins.googleplus.trySilentLogin({
 			//webClientId: app.googleAccountWebClientId
 		}, 
@@ -32,7 +32,7 @@ app.getPlatformAccountInfo = function(platformData, callback){
 			callback,
 			function(errorCode){
 				if( errorCode == app.googleAccountErrors.IGN_IN_CANCELLED ){
-					var result = confirm('Если не зарегаешь под акком, будет плохо! Продолжить?');
+					var result = app.confirmPlatformAccountAbort();
 					
 					if( result )
 						callback(null);

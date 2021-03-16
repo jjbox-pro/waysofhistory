@@ -77,4 +77,8 @@ var app = {
 	getPlatformAccountInfo: function(platformData, callback){
 		// Override by specific platform in file ../src/platforms/[platform name]/launcher.js
 	}
+
+	confirmPlatformAccountAbort: function(){
+		return confirm('Если не использовать учётную запись, то при смене устройства будет невозможно восстановить данные игрового аккаунта. Продолжить?');
+	};
 };
