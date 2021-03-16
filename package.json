@@ -13,6 +13,7 @@
   "author": "Glyph Worlds Team",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cordova-android": "^9.0.0",
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-game-center": "^0.4.2",
     "cordova-plugin-nativestorage": "^2.3.2",
@@ -33,7 +34,9 @@
       "cordova-plugin-game-center": {},
       "cordova-plugin-splashscreen": {}
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   },
   "dependencies": {
     "cordova-plugin-googleplus": "8.5.2",
