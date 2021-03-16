@@ -6,4 +6,4 @@ cd ..
 
 cordova build android
 
-read -p "Press enter to continue..."
+#read -p "Press enter to continue..."
