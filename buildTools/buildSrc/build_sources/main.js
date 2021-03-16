@@ -1,4 +1,4 @@
-const {utils} = require('utils');
+const {utils} = require('jjbox-utils');
 
 (function(){
 	console.clear();

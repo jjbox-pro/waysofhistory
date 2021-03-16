@@ -1,3 +1,4 @@
 {
-	"root":"../../../src/platforms/"
+	"root":"../../../src/platforms/",
+	"srcWebPaths": true
 }

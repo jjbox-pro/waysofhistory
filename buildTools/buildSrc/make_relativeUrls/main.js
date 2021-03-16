@@ -1,4 +1,4 @@
-const {utils} = require('utils');
+const {utils} = require('jjbox-utils');
 
 (function(){
 	console.clear();
@@ -38,8 +38,6 @@ const {utils} = require('utils');
 	utils.log('\n\n\n<------------ start make relative urls for: ' + platform.name + ' ------------>\n\n\n');
 	
 	const root = config.root + platform.name + '/';
-
-	const useWebPaths = true;
 
 	let	filesWithReplaces, filesWithImgReplaces;
 
@@ -115,7 +113,7 @@ const {utils} = require('utils');
 			}
 			
 			
-			if( !useWebPaths ){
+			if( !config.srcWebPaths ){
 				// Пути до изображений
 				text = text
 						.replace(/\/(img\/.*?['"])/g, function(match, p1){
@@ -193,7 +191,7 @@ const {utils} = require('utils');
 		for(var file in srcDir.files){
 			file =  srcDir.files[file];
 			
-			if( useWebPaths ){
+			if( config.srcWebPaths ){
 				replaceInFiles(file);
 				
 				replaceImgInAllFiles(file);

@@ -13,7 +13,6 @@
   "author": "Glyph Worlds Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^9.0.0",
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-game-center": "^0.4.2",
     "cordova-plugin-nativestorage": "^2.3.2",
@@ -34,11 +33,10 @@
       "cordova-plugin-game-center": {},
       "cordova-plugin-splashscreen": {}
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   },
   "dependencies": {
-    "cordova-plugin-googleplus": "8.5.2"
+    "cordova-plugin-googleplus": "8.5.2",
+    "jjbox-utils": "git+https://github.com/jjbox-pro/jjbox-utils.git"
   }
 }
