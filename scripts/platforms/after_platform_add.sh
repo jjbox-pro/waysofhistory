@@ -10,7 +10,7 @@ if windows
 then
     cmd <<< "mklink /j src-cordova \"../../waysofhistory\"" > /dev/null
 else
-    ln -s "src-cordova" "../../waysofhistory"
+    ln -s ../../waysofhistory src-cordova
 fi
 
 icongenie generate -m cordova -i src-cordova/res/icon.png --theme-color 000
