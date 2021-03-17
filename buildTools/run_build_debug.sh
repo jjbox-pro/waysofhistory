@@ -2,15 +2,6 @@
 
 cd -- "$(dirname "$BASH_SOURCE")"
 
-platforms=()
-platforms[0]="android"
-platforms[1]="ios"
+bash run_build.sh debug
 
-for platform in ${platforms[@]}
-do
-	cd platforms/${platform}
-	bash run_build_debug.sh
-	cd ../../
-done
-
-read -p "Press enter to continue..."
+#read -p "Press enter to continue..."

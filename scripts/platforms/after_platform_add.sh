@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/bin/sh
 
 cd -- "$(dirname "$BASH_SOURCE")"
 

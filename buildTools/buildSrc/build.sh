@@ -25,9 +25,4 @@ echo "<<< Updating version >>>"
 cd update_version
 bash run.sh
 
-#for file in *
-#do
-#	bash $file/build_noImages.sh
-#done
-
 #read -p "Press enter to continue..."
