@@ -1,5 +1,5 @@
 {
-	"lang":"ru",
+	"lang":"ru|de|en",
 	"pathSrc":"../../../srcRaw/",
 	"pathOutput":"../../../src/platforms/",
 	"folderSrc":"build<platformCode>"

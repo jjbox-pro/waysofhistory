@@ -8,9 +8,10 @@ platforms[1]="ios|io|9"
 
 noImages=$1
 
+echo "<<< Building resources for platforms >>>"
+
 for platform in ${platforms[@]}
 do
-	echo "<<< building for platform: ${platform} >>>"
 	cd build_sources
 	bash run.sh "platform=${platform}" $noImages
 	cd ..
@@ -18,6 +19,11 @@ do
 	bash run.sh "platform=${platform}"
 	cd ..
 done
+
+echo "<<< Updating version >>>"
+
+cd update_version
+bash run.sh
 
 #for file in *
 #do

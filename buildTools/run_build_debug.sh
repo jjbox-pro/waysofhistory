@@ -13,4 +13,4 @@ do
 	cd ../../
 done
 
-#read -p "Press enter to continue..."
+read -p "Press enter to continue..."
