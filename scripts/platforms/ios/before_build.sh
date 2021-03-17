@@ -12,7 +12,7 @@ then
     cmd <<< "mklink /j src \"../src/platforms/ios\"" > /dev/null
 else
     rm src
-    ln -s ../src/platforms/android src
+    ln -s ../src/platforms/ios src
 fi
 
 #read -p "Press enter to continue..."
