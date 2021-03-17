@@ -7,7 +7,7 @@ var app = {
 		app.getAuthorizationData(function(data){			
 			var params = [];
 			
-			params.push('platform=' + data.platformName);
+			params.push('platform=' + data.platformSuffix);
 			params.push('gid=' + data.uid);
 			params.push('lang=' + data.lang);
 			
