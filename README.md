@@ -42,9 +42,9 @@ cordova plugin add cordova-plugin-splashscreen
 3) Run run_build_(debug|release).sh to build cordova project.
 ```
 
-## Notes
+# Notes
 
-### Plugman 
+## Plugman 
 
 Used for creates own plugin for cordova.
 ```
@@ -59,7 +59,7 @@ plugman platform add --platform_name ios
 plugman createpackagejson ./
 ```
 
-### Platform android
+## Platform android
 
 Gradle. Set flags for full compilation:
 ```
@@ -79,15 +79,49 @@ Keytool. Make waysofhistory.keystore file for publish into android market.
 -keystore waysofhistory.keystore -list -v
 ```
 
-### Platform ios
+## Platform ios
 
+To run app on device needs to open "/platforms/ios/Ways of History.xcworkspace" in xCode and set "Team" in "Signing & Capabilities" tab for "Ways of Hostory" project.
 
-### MacOS
+## MacOS
 
 Command to make all sh scripts executable:
 ```
 find ./ -type f -iname "*.sh" -exec chmod u+x {} \;
 ```
+
+### Android build
+
+Starting CATALINA the default shell is zsh. The profile file name for zsh is ~/.zprofile.
+
+To setup bash as your default:
+
+Open terminal
+Goto preferences and choose "Shell opens with"
+Click on "Command(complete path)" and type "/bin/bash" to start bash shell
+
+Create ~/.zprofile file for zsh shell
+```
+touch ~/.zprofile; open ~/.zprofile
+```
+
+or
+
+Create ~/.bash_profile file for bash shell
+```
+touch ~/.bash_profile; open ~/.bash_profile
+```
+
+Set up environment variables to the file:
+```
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export PATH=${PATH}:~/Library/Android/sdk/platform-tools
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
+```
+
+Java JDK must be version 8.
+
+
 
 
 
