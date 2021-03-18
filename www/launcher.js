@@ -4,6 +4,8 @@ var app = {
     },
 	
     onDeviceReady: function() {
+		//NativeStorage.remove('authorizationData');  alert('authorizationData removed!'); return;
+		
 		app.getAuthorizationData(function(data){			
 			var params = [];
 			
