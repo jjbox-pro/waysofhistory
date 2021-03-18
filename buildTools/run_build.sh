@@ -26,9 +26,10 @@ fi
 
 for platform in ${platforms[@]}
 do
+	echo "Build ${platform}"
 	cd platforms/${platform}
 	bash run_build_${buildConfig}.sh
 	cd ../../
 done
 
-read -p "Press enter to continue..."
+#read -p "Press enter to continue..."
