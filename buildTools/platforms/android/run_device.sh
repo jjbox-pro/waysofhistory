@@ -6,4 +6,4 @@ cd ../../../
 
 cordova run android -device
 
-read -p "Press enter to continue..."
+#read -p "Press enter to continue..."
