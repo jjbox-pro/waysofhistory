@@ -81,7 +81,10 @@ Keytool. Make waysofhistory.keystore file for publish into android market.
 
 ### Platform ios
 
-After repository was cloned to make all sh scripts executable run fallow command:
+
+### MacOS
+
+Command to make all sh scripts executable:
 ```
 find ./ -type f -iname "*.sh" -exec chmod u+x {} \;
 ```
