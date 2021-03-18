@@ -1,7 +1,7 @@
 {
   "name": "com.waysofhistory",
   "displayName": "Ways of History",
-  "version": "1.4.43.9",
+  "version": "1.4.43.10",
   "description": "π — Ways of History. Global strategic game.",
   "main": "launcher.js",
   "scripts": {
@@ -14,7 +14,6 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^9.0.0",
-    "cordova-ios": "^6.2.0",
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-game-center": "^0.4.2",
     "cordova-plugin-googleplus": "^8.5.2",
@@ -38,7 +37,6 @@
       "cordova-plugin-platform-accessor": {}
     },
     "platforms": [
-      "ios",
       "android"
     ]
   },
