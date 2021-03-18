@@ -7,6 +7,7 @@ Cordova mobile waysofhistory project.
 Platforms: android, ios.
 
 ## Used dependencies
+
 — Quasar/icongenie creates logo in different sizes with representative names, placed in the correct folders and proper src-cordova/config.xml declarations.
 
 ```bash
@@ -44,6 +45,7 @@ cordova plugin add cordova-plugin-splashscreen
 ## Notes
 
 ### Plugman 
+
 Used for creates own plugin for cordova.
 ```
 npm i -g plugman (if not installed)
@@ -78,3 +80,11 @@ Keytool. Make waysofhistory.keystore file for publish into android market.
 ```
 
 ### Platform ios
+
+After repository was cloned to make all sh scripts executable run fallow command:
+```
+find ./ -type f -iname "*.sh" -exec chmod u+x {} \;
+```
+
+
+
