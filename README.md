@@ -1,4 +1,4 @@
-# cordova_wofh
+# Ways Of History
 
 Cordova mobile waysofhistory project.
 
