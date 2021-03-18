@@ -9,7 +9,7 @@ platforms=()
 
 cd ../platforms/
 
-for dir in *
+for dir in */
 do
 	platforms+=("${dir}")
 done
