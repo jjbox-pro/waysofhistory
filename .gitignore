@@ -25,5 +25,6 @@
 !/srcRaw/README.md
 
 /www/src/
+/www/src
 
 /package-lock.json
