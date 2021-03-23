@@ -2,8 +2,6 @@
 
 cd -- "$(dirname "$BASH_SOURCE")"
 
-cd ../../../
-
-cordova emulate android
+bash build_platforms.sh release
 
 #read -p "Press enter to continue..."

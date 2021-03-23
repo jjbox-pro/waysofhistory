@@ -144,11 +144,18 @@ let 	platform,
 					text = utils.readFile(file);
 					
 					// Пути до изображений
-					text = text.replace(/(['"(])(\/(img|snd)\/)/g, function(match, p1, p2){
+					text = text.replace(/(['"(])(\/(img|snd)\/)/g, function(match, p1, p2, p3){
 						if( !filesWithImgReplaces[filePath] )
 							filesWithImgReplaces[filePath] = [];
 						
-						let result = p1 + 'https://test.waysofhistory.com' + p2;
+                        let result = p1;
+                        
+                        if( p3 == 'snd' )
+                            result += 'https://t0.waysofhistory.com';
+                        else
+                            result += 'https://test.waysofhistory.com';
+                            
+                        result += p2;
 						
 						filesWithImgReplaces[filePath].push(match + ' ----> ' + result);
 						

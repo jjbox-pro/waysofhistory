@@ -2,8 +2,14 @@
 
 cd -- "$(dirname "$BASH_SOURCE")"
 
-cd ../../../
+INITIAL_DIR=$PWD
 
-cordova emulate android
+cd ../srcRaw/
+
+bash get_srcRaw.sh
+
+cd $INITIAL_DIR
+
+bash rebuild.sh
 
 #read -p "Press enter to continue..."

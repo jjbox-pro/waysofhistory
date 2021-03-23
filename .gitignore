@@ -22,6 +22,8 @@
 /src/**/ggen/
 
 /srcRaw/*
+!/srcRaw/get_srcRaw.sh
+!/srcRaw/lftp_script.txt
 !/srcRaw/README.md
 
 /www/src/

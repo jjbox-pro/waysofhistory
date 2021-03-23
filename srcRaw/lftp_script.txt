@@ -1,0 +1,4 @@
+open ftp.waysofhistory.com
+user denis qscgu4 
+mget temp/client[89].rar
+exit
