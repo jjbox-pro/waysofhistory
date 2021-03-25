@@ -19,7 +19,9 @@
 !/res/icon.png
 
 /src/**/gen/
-/src/**/ggen/
+/src/**/gen/
+/src/**/img/
+/src/**/snd/
 
 /srcRaw/*
 !/srcRaw/get_srcRaw.sh
