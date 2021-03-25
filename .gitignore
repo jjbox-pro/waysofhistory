@@ -18,7 +18,7 @@
 /res/*
 !/res/icon.png
 
-/src/**/gen/
+/src/**/ggen/
 /src/**/gen/
 /src/**/img/
 /src/**/snd/
