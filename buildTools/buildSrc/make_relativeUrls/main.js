@@ -117,7 +117,7 @@ let 	platform,
 					if( !config.srcWebPaths ){
 						// Пути до изображений
 						text = text
-								.replace(/\/(img\/.*?['"])/g, function(match, p1){
+								.replace(/\/((img|snd)\/.*?['"])/g, function(match, p1){
 									if( !filesWithImgReplaces[filePath] )
 										filesWithImgReplaces[filePath] = [];
 									

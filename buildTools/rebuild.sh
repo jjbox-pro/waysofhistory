@@ -4,7 +4,7 @@ cd -- "$(dirname "$BASH_SOURCE")"
 
 cd buildSrc/
 
-bash build_noImages.sh
+bash build_noResources.sh
 
 cd ..
 

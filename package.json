@@ -1,7 +1,7 @@
 {
   "name": "com.waysofhistory",
   "displayName": "Ways of History",
-  "version": "1.4.43.14",
+  "version": "1.4.43.1",
   "description": "π — Ways of History. Global strategic game.",
   "main": "launcher.js",
   "scripts": {

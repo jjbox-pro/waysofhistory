@@ -144,31 +144,44 @@ let 	platform,
 			}
 			
 			
-			
-			
-			
-			if( !argp.noImages ){
-				utils.log('>>>>>>>>>>>>>>>>>>>>>>>>> Images extracting >>>>>>>>>>>>>>>>>>>>>>>>>');
-				
-				let imgDir = {
-					dir: 'img/',
-					regExpIncluded: /img\/(buildings2|gui|gui_mobile|help|map1|map2|town2|glagna|fonts)/,
-					regExpExcluded: /(town2\/houses|map1\/climate-50-2|map1\/climate-100-2|map1\/improvement-50-2|map1\/improvement-100-2)/,
-				};
-
-				utils.copyDir(pathSrc + imgDir.dir, pathOutput + imgDir.dir, {
-					filter: function(fileOrDir, info){
-						if( !info.isDir )
-							return true;
-						
-						if( !imgDir.regExpIncluded.test(fileOrDir) || imgDir.regExpExcluded.test(fileOrDir) )
-							return false;
-						
-						utils.log(fileOrDir);
-						
-						return true;
-					}
-				});
+            
+                                                                                                        
+                                                                                                        
+			if( !argp.noResources ){
+                let resources = {
+                        images: {
+                            dir: 'img/',
+                            regExpIncluded: /img\/(buildings2|gui|gui_mobile|help|map1|map2|town2|glagna|fonts|mobile)/,
+                            regExpExcluded: /(town2\/houses|map1\/climate-50-2|map1\/climate-100-2|map1\/improvement-50-2|map1\/improvement-100-2)/,
+                        },
+                        sounds: {
+                            dir: 'snd/',
+                            regExpIncluded: false,
+                            regExpExcluded: false,
+                        }
+                    },
+                    resType,
+                    res;
+                
+                for(resType in resources){
+                    utils.log('>>>>>>>>>>>>>>>>>>>>>>>>> ' + resType + ' extracting >>>>>>>>>>>>>>>>>>>>>>>>>');
+                    
+                    res = resources[resType];
+                    
+                    utils.copyDir(pathSrc + res.dir, pathOutput + res.dir, {
+                        filter: function(fileOrDir, info){
+                            if( !info.isDir )
+                                return true;
+                            
+                            if( !(!res.regExpIncluded || res.regExpIncluded.test(fileOrDir)) || (res.regExpExcluded && res.regExpExcluded.test(fileOrDir)) )
+                                return false;
+                            
+                            utils.log(fileOrDir);
+                            
+                            return true;
+                        }
+                    });
+                }
 			}
 			
 			return 0;

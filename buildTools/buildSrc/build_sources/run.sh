@@ -3,8 +3,8 @@
 cd -- "$(dirname "$BASH_SOURCE")"
 
 platform=$1
-noImages=$2
+noResources=$2
 
-node main.js $platform $noImages
+node main.js $platform $noResources
 
 #read -p "Press enter to continue..."

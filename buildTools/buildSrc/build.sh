@@ -6,14 +6,14 @@ platforms=()
 platforms[0]="android|an|8"
 platforms[1]="ios|io|9"
 
-noImages=$1
+noResources=$1
 
 echo "<<< Building resources for platforms >>>"
 
 for platform in ${platforms[@]}
 do
 	cd build_sources
-	bash run.sh "platform=${platform}" $noImages
+	bash run.sh "platform=${platform}" $noResources
 	cd ..
 	cd make_relativeUrls
 	bash run.sh "platform=${platform}"
