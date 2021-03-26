@@ -5,24 +5,31 @@ var app = {
 	
     onDeviceReady: function() {
 		//NativeStorage.remove('authorizationData');  alert('authorizationData removed!'); return;
-		app.getAuthorizationData(function(data){			
-			var params = [];
-			
-			params.push('platform=' + data.platformSuffix);
-			params.push('gid=' + data.uid);
-			params.push('lang=' + data.lang);
-			
-			if( true )
-				params.push('mainDomain=' + 'test' + '.waysofhistory.com');
-			else
-				params.push('mainDomain=' + data.lang + '.waysofhistory.com');
-			
-			var url = 'src/ggen/html/' + data.lang + '/glagna_' + data.platformCode + '.html?' + params.join('&');
-			
-			location = url;
+        
+		app.getAuthorizationData(function(data){
+            cordova.plugins.platformAccessor.initWebView(function(){
+                app.runApp(data);
+            });
 		});
     },
 	
+    runApp: function(data){
+        var params = [];
+        
+        params.push('platform=' + data.platformSuffix);
+        params.push('gid=' + data.uid);
+        params.push('lang=' + data.lang);
+        
+        if( true )
+            params.push('mainDomain=' + 'test' + '.waysofhistory.com');
+        else
+            params.push('mainDomain=' + data.lang + '.waysofhistory.com');
+        
+        var url = 'src/ggen/html/' + data.lang + '/glagna_' + data.platformCode + '.html?' + params.join('&');
+        
+        location = url;
+    },
+    
 	getAuthorizationData: function(callback){
 		NativeStorage.getItem('authorizationData', 
 			function(data){
