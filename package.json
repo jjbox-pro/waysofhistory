@@ -1,7 +1,7 @@
 {
   "name": "com.waysofhistory",
   "displayName": "Ways of History",
-  "version": "1.4.43.5",
+  "version": "1.4.44.2",
   "description": "π — Ways of History. Global strategic game.",
   "main": "launcher.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "cordova-android": "^9.0.0",
     "cordova-ios": "^6.2.0",
     "cordova-plugin-android-permissions": "^1.1.2",
+    "cordova-plugin-firebasex": "^12.1.0-cli",
     "cordova-plugin-game-center": "^0.4.2",
     "cordova-plugin-googleplus": "^8.5.2",
     "cordova-plugin-nativestorage": "^2.3.2",
@@ -37,11 +38,15 @@
       "cordova-plugin-game-center": {},
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-sign-in-with-apple": {},
-      "cordova-plugin-platform-accessor": {}
+      "cordova-plugin-platform-accessor": {},
+      "cordova-plugin-firebasex": {
+        "ANDROID_FIREBASE_CONFIG_FILEPATH": "credentials/google-services.json",
+        "IOS_FIREBASE_CONFIG_FILEPATH": "credentials/GoogleService-Info.plist"
+      }
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "dependencies": {

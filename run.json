@@ -1,14 +1,14 @@
 {
     "android": {
         "debug": {
-            "keystore": "waysofhistory.keystore",
+            "keystore": "credentials/waysofhistory.keystore",
             "storePassword": "js9wo93ok",
             "alias": "waysofhistory",
             "password": "js9wo93ok",
             "keystoreType": ""
         },
         "release": {
-            "keystore": "waysofhistory.keystore",
+            "keystore": "credentials/waysofhistory.keystore",
             "storePassword": "js9wo93ok",
             "alias": "waysofhistory",
             "password": "js9wo93ok",
