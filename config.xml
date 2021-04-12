@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.waysofhistory" version="1.4.44.2" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.waysofhistory" project_version="1.4.43.3" version="1.4.433" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Ways of History</name>
     <description>
         π — Ways of History. Global strategic game.
@@ -24,6 +24,7 @@
         <hook src="scripts/platforms/android/after_build.sh" type="after_build" />
         <allow-intent href="market:*" />
         <preference name="AndroidXEnabled" value="true" />
+        
         <icon density="ldpi" src="res/android/ldpi.png" />
         <icon density="mdpi" src="res/android/mdpi.png" />
         <icon density="hdpi" src="res/android/hdpi.png" />
@@ -49,6 +50,7 @@
         <allow-intent href="itms-apps:*" />
         <preference name="scheme" value="app" />
         <preference name="hostname" value="localhost" />
+        
         <icon height="57" src="res/ios/icon.png" width="57" />
         <icon height="114" src="res/ios/icon@2x.png" width="114" />
         <icon height="40" src="res/ios/icon-20@2x.png" width="40" />

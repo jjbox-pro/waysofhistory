@@ -8,8 +8,10 @@ windows() { [[ -n "$WINDIR" ]]; }
 
 if windows
 then
+    cmd <<< "rmdir src-cordova" > /dev/null
     cmd <<< "mklink /j src-cordova \"../../waysofhistory\"" > /dev/null
 else
+    rm src-cordova
     ln -s ../../waysofhistory src-cordova
 fi
 
