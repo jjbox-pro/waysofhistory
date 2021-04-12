@@ -7,12 +7,21 @@ INITIAL_DIR=$PWD
 
 platforms=()
 
-cd ../platforms/
+cd ../platforms
 
-for dir in */
+for dir in $(find . -mindepth 1 -maxdepth 1 -type d -exec basename {} \;)
 do
 	platforms+=("${dir}")
 done
+
+
+if [ ${#platforms[@]} -eq 0 ];
+then
+    echo "No platforms specified. Add platform to cordova project."
+	
+	exit
+fi
+
 
 cd $INITIAL_DIR
 

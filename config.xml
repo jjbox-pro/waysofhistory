@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.waysofhistory" project_version="1.4.43.3" version="1.4.433" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.waysofhistory" project_version="1.4.43.4" version="1.4.434" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Ways of History</name>
     <description>
         π — Ways of History. Global strategic game.
@@ -19,12 +19,13 @@
     <allow-navigation href="https://*.waysofhistory.com/*" />
     <hook src="scripts/platforms/before_platform_add.js" type="before_platform_add" />
     <hook src="scripts/platforms/after_platform_add.js" type="after_platform_add" />
+	<hook src="scripts/platforms/before_prepare.js" type="before_prepare" />
+	
     <platform name="android">
-        <hook src="scripts/platforms/android/before_prepare.sh" type="before_prepare" />
-        <hook src="scripts/platforms/android/after_build.sh" type="after_build" />
+        <hook src="scripts/platforms/android/before_prepare.js" type="before_prepare" />
+        <hook src="scripts/platforms/android/after_build.js" type="after_build" />
         <allow-intent href="market:*" />
         <preference name="AndroidXEnabled" value="true" />
-        
         <icon density="ldpi" src="res/android/ldpi.png" />
         <icon density="mdpi" src="res/android/mdpi.png" />
         <icon density="hdpi" src="res/android/hdpi.png" />
@@ -45,12 +46,11 @@
         <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png" />
     </platform>
     <platform name="ios">
-        <hook src="scripts/platforms/ios/before_prepare.sh" type="before_prepare" />
+        <hook src="scripts/platforms/ios/before_prepare.js" type="before_prepare" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="scheme" value="app" />
         <preference name="hostname" value="localhost" />
-        
         <icon height="57" src="res/ios/icon.png" width="57" />
         <icon height="114" src="res/ios/icon@2x.png" width="114" />
         <icon height="40" src="res/ios/icon-20@2x.png" width="40" />
