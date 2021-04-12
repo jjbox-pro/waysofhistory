@@ -23,6 +23,10 @@ then
 fi
 
 
+IFS=$'\n' platforms=($(sort <<<"${platforms[*]}"))
+unset IFS
+
+
 cd $INITIAL_DIR
 
 
