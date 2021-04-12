@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.waysofhistory" project_version="1.4.43.4" version="1.4.434" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.waysofhistory" project_version="1.4.43.5" version="1.4.435" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Ways of History</name>
     <description>
         π — Ways of History. Global strategic game.
@@ -19,8 +19,7 @@
     <allow-navigation href="https://*.waysofhistory.com/*" />
     <hook src="scripts/platforms/before_platform_add.js" type="before_platform_add" />
     <hook src="scripts/platforms/after_platform_add.js" type="after_platform_add" />
-	<hook src="scripts/platforms/before_prepare.js" type="before_prepare" />
-	
+    <hook src="scripts/platforms/before_prepare.js" type="before_prepare" />
     <platform name="android">
         <hook src="scripts/platforms/android/before_prepare.js" type="before_prepare" />
         <hook src="scripts/platforms/android/after_build.js" type="after_build" />

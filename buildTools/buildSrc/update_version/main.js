@@ -59,7 +59,7 @@ let
 
 
 if( !error )
-    utils.log('\n\n\n<------------ Updating version done. Current version: ' + version + ' ------------>\n');
+    utils.log('\n\n\n<------------ Updating version done. Current version: ' + project_version + ' ------------>\n');
 else{
     utils.logError(error);
     
