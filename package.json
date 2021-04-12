@@ -13,6 +13,7 @@
   "author": "Glyph Worlds Team",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cordova-android": "^9.0.0",
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-firebasex": "^12.1.0-cli",
     "cordova-plugin-game-center": "^0.4.2",
@@ -39,10 +40,30 @@
       "cordova-plugin-platform-accessor": {},
       "cordova-plugin-firebasex": {
         "ANDROID_FIREBASE_CONFIG_FILEPATH": "credentials/google-services.json",
-        "IOS_FIREBASE_CONFIG_FILEPATH": "credentials/GoogleService-Info.plist"
+        "IOS_FIREBASE_CONFIG_FILEPATH": "credentials/GoogleService-Info.plist",
+        "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
+        "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
+        "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
+        "ANDROID_ICON_ACCENT": "#FF00FFFF",
+        "ANDROID_FIREBASE_PERFORMANCE_MONITORING": "false",
+        "ANDROID_PLAY_SERVICES_AUTH_VERSION": "19.0.0",
+        "ANDROID_FIREBASE_ANALYTICS_VERSION": "18.0.2",
+        "ANDROID_FIREBASE_MESSAGING_VERSION": "21.0.1",
+        "ANDROID_FIREBASE_CONFIG_VERSION": "20.0.4",
+        "ANDROID_FIREBASE_PERF_VERSION": "19.1.1",
+        "ANDROID_FIREBASE_AUTH_VERSION": "20.0.3",
+        "ANDROID_FIREBASE_FIRESTORE_VERSION": "22.1.1",
+        "ANDROID_FIREBASE_FUNCTIONS_VERSION": "19.2.0",
+        "ANDROID_FIREBASE_INSTALLATIONS_VERSION": "16.3.5",
+        "ANDROID_FIREBASE_CRASHLYTICS_VERSION": "17.4.0",
+        "ANDROID_FIREBASE_CRASHLYTICS_NDK_VERSION": "17.4.0",
+        "ANDROID_GSON_VERSION": "2.8.6",
+        "ANDROID_FIREBASE_PERF_GRADLE_PLUGIN_VERSION": "1.3.5"
       }
     },
-    "platforms": []
+    "platforms": [
+      "android"
+    ]
   },
   "dependencies": {
     "jjbox-utils": "git+https://github.com/jjbox-pro/jjbox-utils.git"
