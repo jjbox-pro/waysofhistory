@@ -1,6 +1,6 @@
 const {utils} = require('jjbox-utils');
 
-(function(){
+module.exports = function(ctx) {
 	console.clear();
 	
 	const 	argv = utils.prepareArgv(process.argv),
@@ -15,5 +15,5 @@ const {utils} = require('jjbox-utils');
 	utils.writeFile('config.xml', configText);
 	
 	utils.log('<--- done --->');
-})();
+};
 

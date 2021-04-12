@@ -18,7 +18,7 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="https://*.waysofhistory.com/*" />
     <hook src="scripts/platforms/before_platform_add.js" type="before_platform_add" />
-    <hook src="scripts/platforms/after_platform_add.sh" type="after_platform_add" />
+    <hook src="scripts/platforms/after_platform_add.js" type="after_platform_add" />
     <platform name="android">
         <hook src="scripts/platforms/android/before_prepare.sh" type="before_prepare" />
         <hook src="scripts/platforms/android/after_build.sh" type="after_build" />
