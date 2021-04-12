@@ -1,6 +1,6 @@
 const {utils} = require('jjbox-utils');
 
-let
+let 
     package_version,
     project_version,
     error = (function(){
