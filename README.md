@@ -50,6 +50,17 @@ cordova plugin add cordova-plugin-splashscreen
 
 # Notes
 
+## Git
+
+Change the file you do not want to be tracked and use the following command:
+```
+git update-index --assume-unchanged FILE_NAME
+```
+and if you want to track the changes again use this command:
+```
+git update-index --no-assume-unchanged FILE_NAME
+```
+
 ## Plugman 
 
 Used for creates own plugin for cordova.
