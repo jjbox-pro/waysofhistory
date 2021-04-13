@@ -37,11 +37,15 @@ cordova plugin add cordova-plugin-splashscreen
 
 ### Build steps
 ```
-1) Place unzipped raw sources into the srcRaw/ folder;
+1) Clon waysofhistory repository;
 
-2) Run buildTools/buildSrc/build.sh for processing raw sources. Result will be placed into src/ folder for specific platform;
+2) Add required platforms.
 
-3) Run run_build_(debug|release).sh to build cordova project.
+3) Place unzipped raw sources into the srcRaw/ folder;
+
+4) Run buildTools/buildSrc/build.sh for processing raw sources. Result will be placed into src/ folder for specific platform;
+
+5) Run run_build_(debug|release).sh to build cordova project.
 ```
 
 # Notes
@@ -61,6 +65,10 @@ plugman platform add --platform_name ios
 plugman createpackagejson ./
 ```
 
+## Credentials
+
+Credentials folder consists required files for specific platform api.
+
 ## Platform android
 
 Gradle. Set flags for full compilation:
@@ -79,6 +87,11 @@ allprojects {
 Keytool. Make waysofhistory.keystore file for publish into android market.
 ```
 -keystore waysofhistory.keystore -list -v
+```
+
+Followed command build application bundle after apk will be builded.
+```
+(./)gradlew :app:bundle(Debug|Release)
 ```
 
 ## Platform ios
