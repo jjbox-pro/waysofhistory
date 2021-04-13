@@ -40,7 +40,8 @@ module.exports = function(ctx) {
 			'cordova plugin add cordova-plugin-splashscreen'
 		];
 		
-		child_process.execSync(plugins.join(' && '), {cwd: ctx.opts.projectRoot, stdio: 'inherit'});
+		for(var plugin of plugins)
+			child_process.execSync(plugin, {cwd: ctx.opts.projectRoot, stdio: 'inherit'});
 		
 		utils.log('<--- done --->');
 	})();

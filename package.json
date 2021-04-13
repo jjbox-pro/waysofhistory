@@ -13,11 +13,10 @@
   "author": "Glyph Worlds Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^9.0.0",
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-firebasex": "^12.1.0-cli",
     "cordova-plugin-game-center": "^0.4.2",
-    "cordova-plugin-googleplus": "^8.5.2",
+    "cordova-plugin-googleplus": "8.5.2",
     "cordova-plugin-nativestorage": "^2.3.2",
     "cordova-plugin-platform-accessor": "git+https://github.com/jjbox-pro/cordova-plugin-platform-accessor.git",
     "cordova-plugin-sign-in-with-apple": "^0.1.2",
@@ -29,8 +28,7 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-googleplus": {
         "REVERSED_CLIENT_ID": "com.googleusercontent.apps.530673218839-iroukardu627knpn91f0qrmog3omc4jk",
-        "WEB_APPLICATION_CLIENT_ID": "530673218839-9vr964emi57ra48q9soe2vei25o5bkg5.apps.googleusercontent.com",
-        "PLAY_SERVICES_VERSION": "15.0.1"
+        "WEB_APPLICATION_CLIENT_ID": "530673218839-9vr964emi57ra48q9soe2vei25o5bkg5.apps.googleusercontent.com"
       },
       "cordova-plugin-nativestorage": {},
       "cordova-plugin-android-permissions": {},
@@ -43,9 +41,7 @@
         "IOS_FIREBASE_CONFIG_FILEPATH": "credentials/GoogleService-Info.plist"
       }
     },
-    "platforms": [
-      "android"
-    ]
+    "platforms": []
   },
   "dependencies": {
     "jjbox-utils": "git+https://github.com/jjbox-pro/jjbox-utils.git"
