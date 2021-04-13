@@ -1,7 +1,7 @@
 {
   "name": "com.waysofhistory",
   "displayName": "Ways of History",
-  "version": "1.4.436",
+  "version": "1.4.437",
   "description": "π — Ways of History. Global strategic game.",
   "main": "launcher.js",
   "scripts": {
@@ -13,6 +13,8 @@
   "author": "Glyph Worlds Team",
   "license": "Apache-2.0",
   "devDependencies": {
+    "cordova-android": "^9.0.0",
+    "cordova-ios": "^6.2.0",
     "cordova-plugin-android-permissions": "^1.1.2",
     "cordova-plugin-firebasex": "^12.1.0-cli",
     "cordova-plugin-game-center": "^0.4.2",
@@ -41,7 +43,10 @@
         "IOS_FIREBASE_CONFIG_FILEPATH": "credentials/GoogleService-Info.plist"
       }
     },
-    "platforms": []
+    "platforms": [
+      "android",
+      "ios"
+    ]
   },
   "dependencies": {
     "jjbox-utils": "git+https://github.com/jjbox-pro/jjbox-utils.git"

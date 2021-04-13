@@ -6,8 +6,6 @@ const 	argv = utils.prepareArgv(process.argv),
 		
 
 module.exports = function(ctx) {
-	console.clear();
-	
 	utils.log('Running: ' + ctx.hook);
 	
 	
